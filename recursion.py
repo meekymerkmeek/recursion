@@ -205,8 +205,7 @@ def split_53(nums):
 
     def helper(index, sum1, sum2):
         if index == len(nums):
-            return sum1 == sum2
-            
+            return sum1 == sum2         
         if nums[index] % 5 == 0:
             return helper(index + 1, sum1 + nums[index], sum2)
 
