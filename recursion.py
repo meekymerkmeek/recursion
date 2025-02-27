@@ -169,7 +169,7 @@ def split_array(nums):
     if sum(nums) % 2 != 0:
         return False
     return helper(0, 0, 0)
-    
+
 def split_odd_10(nums):
     """
     Given a list of ints, determine if the numbers can be split evenly into two groups
@@ -206,7 +206,7 @@ def split_53(nums):
     def helper(index, sum1, sum2):
         if index == len(nums):
             return sum1 == sum2
-        
+            
         if nums[index] % 5 == 0:
             return helper(index + 1, sum1 + nums[index], sum2)
 
