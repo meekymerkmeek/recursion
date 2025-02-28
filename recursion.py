@@ -104,9 +104,9 @@ def group_sum_5(start, nums, target):
         return False
 
     if nums[start] % 5== 0:
-        if start + 1 < len(nums) and nums[start + 1] == 1:
-            return group_sum_5(start + 2, nums, target - nums[start])
-        return group_sum_5(start + 1, nums, target - nums[start])
+        next_index = start + 2 if start + 1 < len(nums) and \
+        nums[start + 1] == 1 else start + 1
+        return group_sum_5(next_index, nums, target - nums[start])
 
     if group_sum_5(start + 1, nums, target - nums[start]):
         return True
